@@ -4,7 +4,7 @@ const searchInput = document.getElementById('searchInput')
 const buttonPress = document.getElementById('search-btn')
 
 const api = {
-    Key: '70cc22f0365dbc4f648e95a12545c9d9',
+    key: '70cc22f0365dbc4f648e95a12545c9d9',
     base: 'https://api.openweathermap.org/data/2.5/'
 }
 
@@ -22,7 +22,7 @@ function setQuery(evt) {
     }
 }
 
-showSearchCity()
+showSearchCity();
 
 function showSearchCity() {
     var previousSearch = JSON.parse(localStorage.getItem("city")) || []
@@ -37,12 +37,11 @@ function showSearchCity() {
 }
 
 function getResults(query) {
-    const url = api.base + 'forecast?q=' + query + '&units=imperial&APPID=' + api.Key;
+    const url = api.base + 'forecast?q=' + query + '&units=imperial&APPID=' + api.key;
     console.log(url);
     fetch(url)
-        .then(data => {
-            return data.json();
-        }).then(displayResults);
+        .then(data => data.json())
+        .then(dataJson => displayResults(dataJson));
 }
 
 function displayResults(data) {
@@ -73,10 +72,11 @@ var targetDate = new Date();
 targetDate.setDate(targetDate.getDate());
 
 var dd = targetDate.getDate();
-var mm = targetDate.getMonth() + 1; // 0 is January, so we must add 1
+var mm = targetDate.getMonth() + 1;
 var yyyy = targetDate.getFullYear();
 
 for (i = 0; i < 6; i++) {
-    document.getElementById("date" + (i + 1)).innerHTML = mm+ "/" + dd + "/" + yyyy;
+    const dayOfMonth = dd + i;
+    document.getElementById("date" + (i + 1)).innerHTML = mm + "/" + dayOfMonth + "/" + yyyy;
 
 }
