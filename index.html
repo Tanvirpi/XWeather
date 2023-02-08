@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./Assets/style.css">
     <script defer src="./Assets/script.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Weather Dashboard</h1>
@@ -18,29 +20,31 @@
         <div class="search-city-container">
             <h2>Search for a City</h2>
             <form id="form">
-                <input type="search" id="query" name="search" placeholder="">
-                <button id="search-btn">Search</button> 
-                    
+                <input type="search" id="searchInput" placeholder="">
+                <button id="search-btn" class="searchbtn">Search</button>
             </form>
+            <br>
+            <div id="searchedCity">
 
+            </div>
         </div>
 
         <div class="present-info-container">
             <div class="currentCity" id="city">
             </div>
             <div class="date-info" id="currentDate">
-            
+
             </div>
             <div class="time-info" id="currentTime">
             </div>
             <div class="temp-info" id="currentTemp">
-                40F
+
             </div>
             <div class="wind-info" id="currentWind">
-                10 mph
+
             </div>
             <div class="humidity-info" id="currentHumidity">
-                43%
+
             </div>
         </div>
 
@@ -49,38 +53,38 @@
             <div class="forecast-info" id="forecast">
                 <div class="forecast-cell-container">
                     <div class="date" id="date-1">2/5/23</div>
-                        <img src="" alt="weather icon-1" srcset="">
-                        <div class="temp" id="temp-1">30F</div>
-                        <div class="wind" id="wind-1">20 mph</div>
-                        <div class="humid" id="humid-1">25%</div>
+                    <img src="" alt="weather icon-1" srcset="">
+                    <div class="temp" id="temp-1">30F</div>
+                    <div class="wind" id="wind-1">20 mph</div>
+                    <div class="humid" id="humid-1">25%</div>
                 </div>
                 <div class="forecast-cell-container">
                     <div class="date" id="date-2">2/6/23</div>
-                        <img src="" alt="weather icon-2" srcset="">
-                        <div class="temp" id="temp-2">42F</div>
-                        <div class="wind" id="wind-2">5 mph</div>
-                        <div class="humid" id="humid-2">35%</div>
+                    <img src="" alt="weather icon-2" srcset="">
+                    <div class="temp" id="temp-2">42F</div>
+                    <div class="wind" id="wind-2">5 mph</div>
+                    <div class="humid" id="humid-2">35%</div>
                 </div>
                 <div class="forecast-cell-container">
                     <div class="date" id="date-3">2/7/23</div>
-                        <img src="" alt="weather icon-3" srcset="">
-                        <div class="temp" id="temp-">23F</div>
-                        <div class="wind" id="wind-1">16 mph</div>
-                        <div class="humid" id="humid-1">15%</div>
+                    <img src="" alt="weather icon-3" srcset="">
+                    <div class="temp" id="temp-">23F</div>
+                    <div class="wind" id="wind-1">16 mph</div>
+                    <div class="humid" id="humid-1">15%</div>
                 </div>
                 <div class="forecast-cell-container">
                     <div class="date" id="date-4">2/7/23</div>
-                        <img src="" alt="weather icon-4" srcset="">
-                        <div class="temp" id="temp-4">32F</div>
-                        <div class="wind" id="wind-4">14 mph</div>
-                        <div class="humid" id="humid-4">51%</div>
+                    <img src="" alt="weather icon-4" srcset="">
+                    <div class="temp" id="temp-4">32F</div>
+                    <div class="wind" id="wind-4">14 mph</div>
+                    <div class="humid" id="humid-4">51%</div>
                 </div>
                 <div class="forecast-cell-container">
                     <div class="date" id="date-5">2/8/23</div>
-                        <img src="" alt="weather icon-5" srcset="">
-                        <div class="temp" id="temp-5">29F</div>
-                        <div class="wind" id="wind-5">19 mph</div>
-                        <div class="humid" id="humid-5">41%</div>
+                    <img src="" alt="weather icon-5" srcset="">
+                    <div class="temp" id="temp-5">29F</div>
+                    <div class="wind" id="wind-5">19 mph</div>
+                    <div class="humid" id="humid-5">41%</div>
                 </div>
             </div>
 
@@ -88,4 +92,5 @@
     </div>
 
 </body>
+
 </html>

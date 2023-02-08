@@ -24,13 +24,22 @@ header{
 }
 
 
-#query{
-    width: 90%;
+#searchInput{
     height: 40px;
+    width: 90%;
 }
-#search-btn {
+.searchbtn {
+    margin: 10px;
     background-color: rgb(26, 114, 110);
     color: white;
+    height: 40px;
+    width: 90%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+.searchbtn1 {
+    margin: 10px;
+    background-color: grey;
+    color: black;
     height: 40px;
     width: 90%;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
