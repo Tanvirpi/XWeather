@@ -75,7 +75,7 @@ function dateBuilder (d) {
 }
 
 //5 Day Forecast
-buttonPress.addEventListener (click, setQuery1)
+buttonPress.addEventListener ('click', setQuery1)
 function setQuery1 (e){
     e.preventDefault();
     getResults(searchInput.value);
@@ -85,24 +85,24 @@ function getResults (query) {
     const url1 = api.base + 'forecast?q=' + query + '&units=metric&APPID=' + api.Key;
     console.log(url1);
     fetch(url1)
-        .then(forecast => {
-            return forecast.json();
+        .then(data => {
+            return data.json();
           }).then(displayResults1);
       }
 
-      function displayResults1 (forecast) {
-        console.log(forecast);
+      function displayResults1 (data) {
+        console.log(data);
         for(i = 0; i<5; i++){
-            document.getElementById("temp-" + (i+1)).innerHTML = "Temp: " + Number(data.list[i].main.temp - 273.15).toFixed(1)+ "°";
+            document.getElementById("temp" + (i+1)).innerHTML = "Temp: " + Number(data.list[i].main.temp + 273.15).toFixed(1)+ "°F";
            
         }
     
         for(i = 0; i<5; i++){
-            document.getElementById("humid" + (i+1)).innerHTML = "Humidity: " + Number(data.list[i].main.humidity).toFixed(2) + "%";
+            document.getElementById("humid" + (i+1)).innerHTML = "Humidity: " + Number(data.list[i].main.humidity).toFixed(0) + "%";
         }
         
         for(i = 0; i<5; i++){
-            document.getElementById("wind" + (i+1)).innerHTML = "Wind: " + Number(data.list[i].main.humidity).toFixed(2) + "mph";
+            document.getElementById("wind" + (i+1)).innerHTML = "Wind: " + Number(data.list[i].main.humidity).toFixed(0) + "mph";
         }
         
          for(i = 0; i<5; i++){
