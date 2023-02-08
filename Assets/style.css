@@ -18,7 +18,7 @@ header{
     margin: 20px;
     padding: 10px 30px;
     height: 700px;
-    width: 30%;
+    width: 20%;
     float: left;
     border: 1px solid hsla(71, 47%, 20%, 0.5);
 }
@@ -49,7 +49,7 @@ header{
     margin: 30px;
     padding: 10px 30px;
     height: 250px;
-    width: 60%;
+    width: 70%;
     float: right;
     border: 5px solid hsla(71, 47%, 20%, 0.5);
 }
@@ -58,9 +58,9 @@ header{
 .forecast-container{
     float: right;
     margin: 30px;
-    padding: 10px 30px;
+    padding: 20px 30px;
     height: 500px;
-    width: 60%;
+    width: 70%;
     border: 1px solid hsla(71, 47%, 20%, 0.5);
     text-align: left;
 }
@@ -69,10 +69,13 @@ header{
     display: flex;
     justify-content: space-between;
     height: 250px;
+    padding: 5px;
 }
 
 .forecast-cell-container{
-    background-color: darkslateblue;
+    background-color: rgb(6, 4, 19);
     color: white;
+    width: 200px;
+    text-align: center;
 
 }
