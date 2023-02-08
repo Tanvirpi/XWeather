@@ -74,34 +74,41 @@ function dateBuilder (d) {
   return `${day} ${date} ${month} ${year}`;
 }
 
+//5 Day Forecast
+buttonPress.addEventListener (click, setQuery1)
+function setQuery1 (e){
+    e.preventDefault();
+    getResults(searchInput.value);
+}
 
-//filter forEach map reduce ES66
+function getResults (query) {
+    const url1 = api.base + 'forecast?q=' + query + '&units=metric&APPID=' + api.Key;
+    console.log(url1);
+    fetch(url1)
+        .then(forecast => {
+            return forecast.json();
+          }).then(displayResults1);
+      }
 
-// let otherDayForcast = ''
-
-// data.daily.forEach((day, idx) => {
-//     if(idx == 0){
-//         currentTempEl.innerHTML = `
-//         <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
-//         <div class="other">
-//             <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
-//             <div class="temp">Night - ${day.temp.night}&#176;C</div>
-//             <div class="temp">Day - ${day.temp.day}&#176;C</div>
-//         </div>
+      function displayResults1 (forecast) {
+        console.log(forecast);
+        for(i = 0; i<5; i++){
+            document.getElementById("temp-" + (i+1)).innerHTML = "Temp: " + Number(data.list[i].main.temp - 273.15).toFixed(1)+ "°";
+           
+        }
+    
+        for(i = 0; i<5; i++){
+            document.getElementById("humid" + (i+1)).innerHTML = "Humidity: " + Number(data.list[i].main.humidity).toFixed(2) + "%";
+        }
         
-//         `
-//     }else{
-//         otherDayForcast += `
-//         <div class="weather-forecast-item">
-//             <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
-//             <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-//             <div class="temp">Night - ${day.temp.night}&#176;C</div>
-//             <div class="temp">Day - ${day.temp.day}&#176;C</div>
-//         </div>
+        for(i = 0; i<5; i++){
+            document.getElementById("wind" + (i+1)).innerHTML = "Wind: " + Number(data.list[i].main.humidity).toFixed(2) + "mph";
+        }
         
-//         `
-//     }
-// })
-
-
-// weatherForecastEl.innerHTML = otherDayForcast;
+         for(i = 0; i<5; i++){
+            document.getElementById("img" + (i+1)).src = "http://openweathermap.org/img/wn/"+
+            data.list[i].weather[0].icon
+            +".png";
+        }
+        ;
+}
