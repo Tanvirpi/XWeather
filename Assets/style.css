@@ -17,16 +17,16 @@ header{
 .search-city-container{
     margin: 20px;
     padding: 10px 30px;
-    height: 700px;
-    width: 20%;
+    height: 800px;
+    width: 23%;
     float: left;
-    border: 1px solid hsla(71, 47%, 20%, 0.5);
+    border: 10px solid hsla(71, 47%, 20%, 0.5);
 }
 
 
 #searchInput{
     height: 40px;
-    width: 90%;
+    width: 95%;
 }
 .searchbtn {
     margin: 10px;
@@ -48,20 +48,24 @@ header{
 .present-info-container{
     margin: 30px;
     padding: 10px 30px;
-    height: 250px;
+    height: 300px;
     width: 70%;
     float: right;
-    border: 5px solid hsla(71, 47%, 20%, 0.5);
+    border: 10px solid hsla(71, 47%, 20%, 0.5);
 }
 
+.currentCity{
+    font: bold;
+    font-size: 50px;
+}
 
 .forecast-container{
     float: right;
     margin: 30px;
     padding: 20px 30px;
-    height: 500px;
+    height: 400px;
     width: 70%;
-    border: 1px solid hsla(71, 47%, 20%, 0.5);
+    border: 10px solid hsla(71, 47%, 20%, 0.5);
     text-align: left;
 }
 
