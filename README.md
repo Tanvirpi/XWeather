@@ -25,11 +25,11 @@ THEN I am again presented with current and future conditions for that city
 ```
 
 ### Deployed Link
-[Live](https://tanvirpi.github.io/Timed-Quiz/)
+[Live](https://tanvirpi.github.io/XWeather/)
 
 ### Screenshot
 
-![Image](https://github.com/Tanvirpi/Timed-Quiz/blob/main/Screenshot.png)
+![Image](https://github.com/Tanvirpi/Timed-Quiz/blob/main/assets/Screenshot.png)
 
 
 ### References
