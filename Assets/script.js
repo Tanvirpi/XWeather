@@ -42,8 +42,9 @@ function showSearchCity() {
 }
 
 function getResults(query) {
-        const url = api.base + 'forecast?q=' + query + '&units=imperial&APPID=' + api.key;
+    const url = api.base + 'forecast?q=' + query + '&units=imperial&APPID=' + api.key;
     console.log(url);
+    cityEl.innerText = query;
     fetch(url)
         .then(data => data.json())
         .then(dataJson => displayResults(dataJson));
@@ -51,7 +52,6 @@ function getResults(query) {
 
 function displayResults(data) {
     console.log(data);
-    cityEl.innerText = searchInput.value;
     for (i = 0; i < numberOfDays; i++) {
         document.getElementById("temp" + (i + 1)).innerHTML = "Temp: " + Number(data.list[i].main.temp).toFixed(1) + " °F";
         document.getElementById("humid" + (i + 1)).innerHTML = "Humidity: " + Number(data.list[i].main.humidity).toFixed(0) + " %";
